@@ -25,7 +25,7 @@ public class Company {
     }
     private double calculateIncome(Employee employee) {
         if (employee instanceof Manager)
-            return companyIncome += ((Manager) employee).INCOME;
+            return ((Manager) employee).INCOME;
         else return 0;
     }
     public void printEmployees() {
@@ -35,6 +35,6 @@ public class Company {
         }
         System.out.println(getIncome());
     }
-    // TODO: Правильно посчитать incomeCompany. Сделать вывод список топ высоких з.п и топ низких з.п.
-    //  реализовать уольнене сотрудников.
+    // TODO: 1. Сделать вывод список топ высоких з.п и топ низких з.п.
+    //       2. реализовать уольнене сотрудников.
 }
