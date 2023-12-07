@@ -1,4 +1,7 @@
+import javax.annotation.processing.Completion;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Company {
     private final ArrayList<Employee> employees;
@@ -35,6 +38,12 @@ public class Company {
         }
         System.out.println(getIncome());
     }
-    // TODO: 1. Сделать вывод список топ высоких з.п и топ низких з.п.
-    //       2. реализовать уольнене сотрудников.
+
+    public List<Employee> getTopSalaryStaff(int count) {
+        return employees;
+    }
+
+
+
+    // TODO: 1. Реализовать компаратор для списка по з.п
 }
