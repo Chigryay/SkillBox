@@ -1,7 +1,14 @@
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 
 public class Company {
-    private final ArrayList<Employee> employees;
+    private final List<Employee> employees;
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
 
     public Company() {
         employees = new ArrayList<>();
@@ -28,13 +35,27 @@ public class Company {
             return ((Manager) employee).INCOME;
         else return 0;
     }
-    public void printEmployees() {
+    public void printEmployees(List<Employee> employees) {
+        int id = 1;
         for (Employee employee : employees) {
-            System.out.println(employee.getClass() + ", Salary - " + employee.getMonthSalary());
-            if (employee instanceof Manager) System.out.println("Income Manager - " + ((Manager) employee).INCOME);
+            System.out.println("id - " + id + " | " + employee.getClass()
+                    + " | Salary - " + employee.getMonthSalary());
+            /*if (employee instanceof Manager) System.out.println("Income Manager - "
+                    + ((Manager) employee).INCOME);*/
+            id++;
         }
-        System.out.println(getIncome());
+        System.out.println("Income - " + getIncome());
     }
-    // TODO: 1. Сделать вывод список топ высоких з.п и топ низких з.п.
-    //       2. реализовать уольнене сотрудников.
+    /* Доделать увольнение сотрудников */
+    public List<Employee> fire(int count) {
+        return employees.stream().map(employee -> employees::remove)
+    }
+    public List<Employee> getLowSalaryStaff(int count) {
+        return employees.stream().sorted(Comparator.comparing(Employee::getMonthSalary))
+                .limit(count).toList();
+    }
+    public List<Employee> getTopSalaryStaff(int count) {
+        return employees.stream().sorted(Comparator.comparing(Employee::getMonthSalary).reversed())
+                .limit(count).toList();
+    }
 }
