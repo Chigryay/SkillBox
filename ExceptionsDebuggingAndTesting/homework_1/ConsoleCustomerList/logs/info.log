@@ -1,0 +1,7 @@
+2023-43-19 02:43:30 [main] INFO  Main - add Василий Петров vasily.petrov@gmail.com +79215637722
+2023-43-19 02:43:32 [main] INFO  Main - add Василий Петров vasily.petrov@gmail.com +79215637722dfdfd
+2023-43-19 02:43:32 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +79215637722dfdfd
+2023-43-19 02:43:34 [main] INFO  Main - count
+2023-43-19 02:43:47 [main] INFO  Main - list
+2023-46-19 02:46:29 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +79215637722dfddf
+2023-46-19 02:46:33 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +7921563772244444444444444444444444444
