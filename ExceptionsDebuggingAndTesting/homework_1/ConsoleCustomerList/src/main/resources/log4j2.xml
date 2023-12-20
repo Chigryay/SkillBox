@@ -3,7 +3,6 @@
     <appenders>
         <File name="ErrorFile" fileName="logs/error.log">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
-
         </File>
 
         <File name="InfoFile" fileName="logs/queries.log">
@@ -12,9 +11,10 @@
                 <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
             </filters>
         </File>
+
     </appenders>
     <Loggers>
-        <root level="info" >
+        <root level="info">
             <appenderRef ref="InfoFile" level="info"/>
             <appenderRef ref="ErrorFile" level="error"/>
         </root>
