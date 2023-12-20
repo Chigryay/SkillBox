@@ -20,7 +20,9 @@ public class Main {
         while (true) {
             try {
                 String command = scanner.nextLine();
+
                 log.info(command);
+
                 String[] tokens = command.split("\\s+", 2);
 
                 if (tokens[0].equals("add")) {
