@@ -14,3 +14,5 @@
 2023-29-19 02:29:09 [main] ERROR Main - DataFormatException: Неверный формат E-MAIL! ==> vasily.petil.com
 2023-47-19 02:47:44 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +792154444444444444444444
 2023-48-19 02:48:18 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +79215637722rrrr333333333
+2023-44-19 15:44:17 [main] ERROR Main - DataFormatException: Неверный формат телефона! ==> +79215637722dfdf
+2023-44-19 15:44:22 [main] ERROR Main - DataFormatException: Неверный формат E-MAIL! ==> vasily.petrovil.com
