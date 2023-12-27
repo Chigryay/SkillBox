@@ -20,9 +20,17 @@ public class Main {
         while (true) {
             try {
                 String command = scanner.nextLine();
+<<<<<<< HEAD
                 log.info(command);
                 String[] tokens = command.split("\\s+", 2);
 
+=======
+
+                log.info(command);
+
+                String[] tokens = command.split("\\s+", 2);
+
+>>>>>>> a255d836086bf4fcfb02663b17a52b6a3165b24c
                 if (tokens[0].equals("add")) {
                     executor.addCustomer(tokens[1]);
                 } else if (tokens[0].equals("list")) {
