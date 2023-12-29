@@ -15,6 +15,7 @@ public class ParseHTML {
     public Document getDocument() {
         return document;
     }
+
     private final Document document = getHTML();
 
     public ParseHTML() throws IOException {
@@ -23,11 +24,21 @@ public class ParseHTML {
     protected Document getHTML() throws IOException {
         return connection.get();
     }
-    public void printNamesLines() throws IOException {
+
+    public void printNamesLinesMetro() throws IOException {
         Map<String, String> linesMetro = new LinesMetro().linesMetro;
+        System.out.println("Номер линии   Наименование линии");
         for (Map.Entry<String, String> lineMetro : linesMetro.entrySet()) {
-            System.out.println(lineMetro.getKey() + " - " + lineMetro.getValue());
+            System.out.println(lineMetro.getKey() + "\t\t\t-\t" + lineMetro.getValue());
         }
+    }
+    public void printStationMetro() throws IOException {
+        Map<String, Integer> stationsMetro = new StationsMetro().stationsMap;
+        System.out.println("Номер станции   Наименование линии");
+        for (Map.Entry<String, Integer> stationMetro : stationsMetro.entrySet()) {
+            System.out.println(stationMetro.getValue() + "\t\t\t  -\t\t" + stationMetro.getKey());
+        }
+        System.out.println(stationsMetro.size());
     }
 
 }

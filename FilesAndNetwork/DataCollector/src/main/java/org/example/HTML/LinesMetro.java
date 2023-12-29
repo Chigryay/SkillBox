@@ -14,20 +14,17 @@ public class LinesMetro {
 
     public LinesMetro() throws IOException {
     }
+
     Elements elements = getElements();
-    protected Map<String, String> linesMetro = getLines(elements);
+    protected Map<String, String> linesMetro = getLines();
 
     private Elements getElements() {
         return elements = document.select("span.t-metrostation-list-header");
 
     }
-    private List<Map.Entry<String, String>> sortedMap(Map<String, String> map) {
-        return map.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByKey())
-                .toList();
-    }
-    private Map<String, String> getLines(Elements elements) {
+
+
+    private Map<String, String> getLines() {
         Map<String, String> linesMetro = new TreeMap<>();
         String numberLine;
         String nameLine;
