@@ -33,11 +33,12 @@ public class ParseHTML {
         }
     }
     public void printStationMetro() throws IOException {
-        Map<Integer, String> stationsMetro = new StationsMetro().stationsMap;
+        Map<String, Integer> stationsMetro = new StationsMetro().stationsMap;
         System.out.println("Номер станции   Наименование линии");
-        for (Map.Entry<Integer, String> stationMetro : stationsMetro.entrySet()) {
-            System.out.println(stationMetro.getKey() + "\t\t\t-\t" + stationMetro.getValue());
+        for (Map.Entry<String, Integer> stationMetro : stationsMetro.entrySet()) {
+            System.out.println(stationMetro.getValue() + "\t\t\t  -\t\t" + stationMetro.getKey());
         }
+        System.out.println(stationsMetro.size());
     }
 
 }
