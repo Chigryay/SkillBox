@@ -12,8 +12,7 @@ import java.util.TreeMap;
 
 public class StationsMetro {
     private final Document document = new ParseHTML().getDocument();
-    /*Elements elementsNumberLines =  document.select(".single-station>.num");
-    Elements elementsNamesStations =  document.select(".single-station>.name");*/
+
     private final Elements elements = document.select(".single-station");
 
     public StationsMetro() throws IOException {

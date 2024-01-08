@@ -1,0 +1,21 @@
+[ {
+  "number" : 1,
+  "name" : "Кировско-Выборгская",
+  "StationsCount" : 19
+}, {
+  "number" : 2,
+  "name" : "Московско-Петроградская",
+  "StationsCount" : 18
+}, {
+  "number" : 3,
+  "name" : "Невско-Василеостровская",
+  "StationsCount" : 12
+}, {
+  "number" : 4,
+  "name" : "Правобережная",
+  "StationsCount" : 8
+}, {
+  "number" : 5,
+  "name" : "Фрунзенско-Приморская",
+  "StationsCount" : 12
+} ]
