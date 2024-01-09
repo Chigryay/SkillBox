@@ -16,6 +16,7 @@ public class LinesMetro {
     }
 
     Elements elements = getElements();
+
     protected Map<String, String> linesMetro = getLines();
 
     private Elements getElements() {
@@ -23,14 +24,12 @@ public class LinesMetro {
 
     }
 
-
     private Map<String, String> getLines() {
         Map<String, String> linesMetro = new TreeMap<>();
-        String numberLine;
-        String nameLine;
+
         for (Element element : elements) {
-            nameLine = element.text();
-            numberLine = element.attr("data-line");
+            String nameLine = element.text();
+            String numberLine = element.attr("data-line");
             linesMetro.put(numberLine, nameLine);
         }
         return linesMetro;

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ParseHTML {
-    private String URL = "https://skillbox-java.github.io/";
+    private final String URL = "https://skillbox-java.github.io/";
     private final Connection connection = Jsoup.connect(URL);
 
     public Document getDocument() {
@@ -32,13 +32,13 @@ public class ParseHTML {
             System.out.println(lineMetro.getKey() + "\t\t\t-\t" + lineMetro.getValue());
         }
     }
+
     public void printStationMetro() throws IOException {
         Map<String, Integer> stationsMetro = new StationsMetro().stationsMap;
         System.out.println("Номер станции   Наименование линии");
         for (Map.Entry<String, Integer> stationMetro : stationsMetro.entrySet()) {
             System.out.println(stationMetro.getValue() + "\t\t\t  -\t\t" + stationMetro.getKey());
         }
-        System.out.println(stationsMetro.size());
     }
 
 }
