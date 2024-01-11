@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BufferAndChannel.executor": "Run",
-    "Application.BufferAndChannel_2.executor": "Run",
-    "Application.FilesAndPaths.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.org.example.SearchFiles.Main.executor": "Run",
-    "Application.org.example.SerializationTests.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JLearnJava/SkillBox/FilesAndNetwork",
-    "onboarding.tips.debug.path": "C:/Skillbox/FilesAndNetwork/DataCollector/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BufferAndChannel.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BufferAndChannel_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FilesAndPaths.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.SearchFiles.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.SerializationTests.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JLearnJava/SkillBox/FilesAndNetwork&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Skillbox/FilesAndNetwork/DataCollector/src/main/java/org/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.example.SearchFiles" />
@@ -64,19 +59,6 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.HTML.Main" />
       <module name="DataCollector" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="DataCollector" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="DataCollector" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
