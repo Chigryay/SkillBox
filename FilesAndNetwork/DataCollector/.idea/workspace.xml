@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/data/0/5/dates-2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/0/5/dates-2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/2/4/depths-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/2/4/depths-1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/4/6/dates-1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/4/6/dates-1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/4/6/depths-3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/4/6/depths-3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/7/1/depths-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/7/1/depths-2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/9/6/dates-3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/9/6/dates-3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/Main.java" afterDir="false" />
+>>>>>>> 07bbb57934ecd1af8ea3065b538611398843e48c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -55,7 +66,7 @@
       <recent name="org.example.SearchFiles" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.org.example.SearchFiles.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.HTML.Main" />
       <module name="DataCollector" />
@@ -63,6 +74,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="org.example.SearchFiles.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.SearchFiles.Main" />
+      <module name="DataCollector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.SearchFiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="DataCollector" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="DataCollector" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.org.example.SearchFiles.Main" />
+      </list>
+    </recent_temporary>
+>>>>>>> 07bbb57934ecd1af8ea3065b538611398843e48c
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
