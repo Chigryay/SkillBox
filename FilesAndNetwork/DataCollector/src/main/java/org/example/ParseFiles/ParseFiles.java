@@ -2,6 +2,7 @@ package org.example.ParseFiles;
 
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
@@ -18,9 +19,9 @@ public class ParseFiles {
         try (BufferedReader reader = new BufferedReader(new FileReader(String.valueOf(path)))) {
             CsvMapper mapper = new CsvMapper();
             String className = String.valueOf(path).replaceAll("^.+\\\\", "");
-            className = className.replaceAll("\\.csv", ".java");
+            className = className.replaceAll("\\.csv", "");
             String capitalizedClassName = className.substring(0, 1).toUpperCase() + className.substring(1);
-            CsvSchema schema = mapper.schemaFor(Class.forName(capitalizedClassName).getSuperclass())
+            CsvSchema schema = mapper.schemaFor(Object.class)
                     .withColumnSeparator(',')
                     .withSkipFirstDataRow(true);
             MappingIterator<Object> iterator = mapper
@@ -33,9 +34,7 @@ public class ParseFiles {
             for (Object element : elements) {
                 System.out.println(element.toString());
             }
-
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println(Dates_2.class);
         }
     }
     public static void parseJsonToPojo(Path path) throws IOException {
