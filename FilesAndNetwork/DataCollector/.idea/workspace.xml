@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0/5/dates-2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/2/4/depths-1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/4/6/dates-1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/4/6/depths-3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/7/1/depths-2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/9/6/dates-3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/dates-1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/dates-2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/dates-3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/depths-1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/depths-2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/depths-3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/SearchFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SearchFiles/SearchFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

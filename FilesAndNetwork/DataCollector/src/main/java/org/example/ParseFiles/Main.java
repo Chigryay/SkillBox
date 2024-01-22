@@ -10,8 +10,14 @@ public class Main {
         Path depths_2_json = Paths.get("src/main/java/org/example/data/7/1/depths-2.json");
         Path depths_3_json = Paths.get("src/main/java/org/example/data/4/6/depths-3.json");
 
-        ParseFiles.parseJsonToPojo(depths_1_json);
+        /*ParseFiles.parseJsonToPojo(depths_1_json);
         ParseFiles.parseJsonToPojo(depths_2_json);
-        ParseFiles.parseJsonToPojo(depths_3_json);
+        ParseFiles.parseJsonToPojo(depths_3_json);*/
+
+        Path dates_2_csv = Paths.get("src/main/java/org/example/data/0/5/dates-2.csv");
+
+        ParseFiles.parseCsvToPojo(dates_2_csv);
+
+
     }
 }
