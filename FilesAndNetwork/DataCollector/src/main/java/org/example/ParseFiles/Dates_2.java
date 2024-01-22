@@ -1,12 +1,13 @@
 package org.example.ParseFiles;
 
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.util.Date;
+@JsonPropertyOrder({"name", "date"})
 public record Dates_2(String name, String date) {
     @Override
     public String toString() {
-        return "Dates_2{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", date=" + date +
                 '}';
     }

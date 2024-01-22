@@ -6,6 +6,7 @@ import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
 import javax.lang.model.element.Element;
+import javax.management.remote.SubjectDelegationPermission;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,20 +15,27 @@ import java.util.List;
 
 public class ParseFiles {
     public static void parseCsvToPojo(Path path) throws IOException {
-        try (Reader reader = new FileReader(String.valueOf(path))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(String.valueOf(path)))) {
             CsvMapper mapper = new CsvMapper();
-            CsvSchema schema = mapper.schemaFor(Element.class)
+            String className = String.valueOf(path).replaceAll("^.+\\\\", "");
+            className = className.replaceAll("\\.csv", ".java");
+            String capitalizedClassName = className.substring(0, 1).toUpperCase() + className.substring(1);
+            CsvSchema schema = mapper.schemaFor(Class.forName(capitalizedClassName).getSuperclass())
                     .withColumnSeparator(',')
                     .withSkipFirstDataRow(true);
-            MappingIterator<Element> iterator = mapper.readerFor(Element.class)
+            MappingIterator<Object> iterator = mapper
+                    .readerFor(Object.class)
                     .with(schema)
                     .readValues(reader);
-            List<Element> elements = iterator.readAll();
 
-            for (Element element : elements) {
+            List<Object> elements = iterator.readAll();
+
+            for (Object element : elements) {
                 System.out.println(element.toString());
             }
 
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
     public static void parseJsonToPojo(Path path) throws IOException {

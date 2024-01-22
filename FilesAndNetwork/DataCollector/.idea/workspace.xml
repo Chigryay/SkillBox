@@ -7,8 +7,7 @@
     <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JLearnJava/SkillBox/FilesAndNetwork/DataCollector",
+    "last_opened_file_path": "C:/JLearnJava/SkillBox/Tests/ToCSV",
     "onboarding.tips.debug.path": "C:/Skillbox/FilesAndNetwork/DataCollector/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -157,5 +156,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added 19_3" />
     <option name="LAST_COMMIT_MESSAGE" value="Added 19_3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
