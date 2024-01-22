@@ -13,7 +13,9 @@ public class SearchFiles extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
-        System.out.println(file.getFileName());
+        if (!String.valueOf(file.getFileName()).startsWith(".")) {
+            System.out.println(file.getParent() + " " + file.getFileName());
+        }
         return FileVisitResult.CONTINUE;
     }
 }
