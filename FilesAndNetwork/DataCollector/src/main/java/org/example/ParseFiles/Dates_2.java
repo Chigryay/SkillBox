@@ -9,6 +9,6 @@ public record Dates_2(String name, String date) {
     public String toString() {
         return "name='" + name + '\'' +
                 ", date=" + date +
-                '}';
+                "}";
     }
 }

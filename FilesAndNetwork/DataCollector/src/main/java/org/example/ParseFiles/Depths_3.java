@@ -2,17 +2,12 @@ package org.example.ParseFiles;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Depths_3 {
-    @JsonProperty("station_name")
-    public String station_name;
-    @JsonProperty("depth")
-    public String depth;
-
+public record Depths_3(String station_name, String depths) {
     @Override
     public String toString() {
-        return "\nDepth_3 {\n" +
+        return "Depths_2{" +
                 "station_name='" + station_name + '\'' +
-                ", \ndepth='" + depth + '\'' + "\n" +
+                ", depths='" + depths + '\'' +
                 '}';
     }
 }
