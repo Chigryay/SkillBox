@@ -7,21 +7,10 @@
     <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
       <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BufferChannel/BufferAndChannel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BufferChannel/BufferAndChannel_2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FilesAndPaths.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Dates_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Depths_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParseFiles/ParseFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SerializationTests/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SerializationTests/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tests/ToCSV/src/main/resources/dates-1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/4/6/dates-1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BufferAndChannel.executor": "Run",
-    "Application.BufferAndChannel_2.executor": "Run",
-    "Application.FilesAndPaths.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.org.example.HTML.Main.executor": "Run",
-    "Application.org.example.SearchFiles.Main.executor": "Run",
-    "Application.org.example.SerializationTests.Main.executor": "Run",
-    "Maven.DataCollector [-Dtest=NOT_RESOLVED...].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JLearnJava/SkillBox/Tests/ToCSV",
-    "onboarding.tips.debug.path": "C:/Skillbox/FilesAndNetwork/DataCollector/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Csv.Editor.Settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BufferAndChannel.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BufferAndChannel_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FilesAndPaths.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.HTML.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.SearchFiles.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.SerializationTests.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DataCollector [-Dtest=NOT_RESOLVED...].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JLearnJava/SkillBox/Tests/ToCSV&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Skillbox/FilesAndNetwork/DataCollector/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Csv.Editor.Settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\JLearnJava\SkillBox\FilesAndNetwork\DataCollector\src\main\java\org\example\data\4\6" />

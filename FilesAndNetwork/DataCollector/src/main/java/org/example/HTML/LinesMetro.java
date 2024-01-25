@@ -17,21 +17,27 @@ public class LinesMetro {
 
     Elements elements = getElements();
 
-    protected Map<String, String> linesMetro = getLines();
-
     private Elements getElements() {
         return elements = document.select("span.t-metrostation-list-header");
-
     }
 
-    private Map<String, String> getLines() {
-        Map<String, String> linesMetro = new TreeMap<>();
+    protected List<String> nameLines = getNameLines();
+    protected List<String> numberLines = getNumberLines();
 
+    private List<String> getNameLines() {
+        List<String> nameLines = new ArrayList<>();
         for (Element element : elements) {
-            String nameLine = element.text();
-            String numberLine = element.attr("data-line");
-            linesMetro.put(numberLine, nameLine);
+            nameLines.add(element.text());
         }
-        return linesMetro;
+        return nameLines;
     }
+
+    private List<String> getNumberLines() {
+        List<String> numberLines = new ArrayList<>();
+        for (Element element : elements) {
+            numberLines.add(element.attr("data-line"));
+        }
+        return numberLines;
+    }
+
 }

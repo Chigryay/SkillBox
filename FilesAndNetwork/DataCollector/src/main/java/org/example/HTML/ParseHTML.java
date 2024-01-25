@@ -25,20 +25,19 @@ public class ParseHTML {
         return connection.get();
     }
 
-    public void printNamesLinesMetro() throws IOException {
-        Map<String, String> linesMetro = new LinesMetro().linesMetro;
-        System.out.println("Номер линии   Наименование линии");
-        for (Map.Entry<String, String> lineMetro : linesMetro.entrySet()) {
-            System.out.println(lineMetro.getKey() + "\t\t\t-\t" + lineMetro.getValue());
-        }
+    public List<Integer> getStationsNumberMetro() throws IOException {
+        return new StationsMetro().stationsNumber;
     }
 
-    public void printStationMetro() throws IOException {
-        Map<String, Integer> stationsMetro = new StationsMetro().stationsMap;
-        System.out.println("Номер станции   Наименование линии");
-        for (Map.Entry<String, Integer> stationMetro : stationsMetro.entrySet()) {
-            System.out.println(stationMetro.getValue() + "\t\t\t  -\t\t" + stationMetro.getKey());
-        }
+    public List<String> getStationsNameMetro() throws IOException {
+        return new StationsMetro().stationsName;
     }
 
+    public List<String> nameLinesMetro() throws IOException {
+        return new LinesMetro().nameLines;
+    }
+
+    public List<String> numberLinesMetro() throws IOException {
+        return new LinesMetro().numberLines;
+    }
 }

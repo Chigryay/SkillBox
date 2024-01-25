@@ -5,10 +5,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class StationsMetro {
     private final Document document = new ParseHTML().getDocument();
@@ -17,16 +14,26 @@ public class StationsMetro {
 
     public StationsMetro() throws IOException {
     }
-    protected Map<String, Integer> stationsMap = getStations();
-    private Map<String, Integer> getStations() {
-        Map<String, Integer> stationsMap = new TreeMap<>();
 
+    protected List<String> stationsName = getStationsName();
+    protected List<Integer> stationsNumber = getStationsNumber();
+
+    private List<String> getStationsName() {
+        List<String> stationsName = new ArrayList<>();
         for (Element element : elements) {
             String[] splitLine = element.text().split("\\.\\s");
-            int numberStation = Integer.parseInt(splitLine[0]);
-            String nameStation = splitLine[1];
-            stationsMap.put(nameStation, numberStation);
+            stationsName.add(splitLine[1]);
         }
-        return stationsMap;
+        return stationsName;
     }
+
+    private List<Integer> getStationsNumber() {
+        List<Integer> stationsNumber = new ArrayList<>();
+        for (Element element : elements) {
+            String[] splitLine = element.text().split("\\.\\s");
+            stationsNumber.add(Integer.valueOf(splitLine[0]));
+        }
+        return stationsNumber;
+    }
+
 }
