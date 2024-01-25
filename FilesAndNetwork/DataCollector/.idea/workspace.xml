@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" afterDir="false" />
-    </list>
+    <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
