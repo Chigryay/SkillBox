@@ -8,17 +8,25 @@ import java.io.IOException;
 import java.util.*;
 
 public class StationsMetro {
-    private final Document document = new ParseHTML().getDocument();
+    private static final Document document;
 
-    private final Elements elements = document.select(".single-station");
+    static {
+        try {
+            document = new ParseHTML().getDocument();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static final Elements elements = document.select(".single-station");
 
     public StationsMetro() throws IOException {
     }
 
-    protected List<String> stationsName = getStationsName();
-    protected List<Integer> stationsNumber = getStationsNumber();
+    protected static List<String> stationsName = getStationsName();
+    protected static List<Integer> stationsNumber = getStationsNumber();
 
-    private List<String> getStationsName() {
+    private static List<String> getStationsName() {
         List<String> stationsName = new ArrayList<>();
         for (Element element : elements) {
             String[] splitLine = element.text().split("\\.\\s");
@@ -27,7 +35,7 @@ public class StationsMetro {
         return stationsName;
     }
 
-    private List<Integer> getStationsNumber() {
+    private static List<Integer> getStationsNumber() {
         List<Integer> stationsNumber = new ArrayList<>();
         for (Element element : elements) {
             String[] splitLine = element.text().split("\\.\\s");

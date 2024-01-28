@@ -10,21 +10,29 @@ import java.util.*;
 public class LinesMetro {
 
 
-    private final Document document = new ParseHTML().getDocument();
+    private static final Document document;
+
+    static {
+        try {
+            document = new ParseHTML().getDocument();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public LinesMetro() throws IOException {
     }
 
-    Elements elements = getElements();
+    static Elements elements = getElements();
 
-    private Elements getElements() {
+    private static Elements getElements() {
         return elements = document.select("span.t-metrostation-list-header");
     }
 
-    protected List<String> nameLines = getNameLines();
-    protected List<String> numberLines = getNumberLines();
+    protected static List<String> nameLines = getNameLines();
+    protected static List<String> numberLines = getNumberLines();
 
-    private List<String> getNameLines() {
+    private static List<String> getNameLines() {
         List<String> nameLines = new ArrayList<>();
         for (Element element : elements) {
             nameLines.add(element.text());
@@ -32,7 +40,7 @@ public class LinesMetro {
         return nameLines;
     }
 
-    private List<String> getNumberLines() {
+    private static List<String> getNumberLines() {
         List<String> numberLines = new ArrayList<>();
         for (Element element : elements) {
             numberLines.add(element.attr("data-line"));

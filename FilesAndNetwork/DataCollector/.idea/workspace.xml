@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3" />
+    <list default="true" id="4ac44f55-44c4-4a97-a100-d104f381c96a" name="Changes" comment="Added 19_3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/LinesMetro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/ParseHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTML/StationsMetro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/addDataMetro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/addDataMetro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/2/4/depths-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/2/4/depths-1.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,6 +50,7 @@
     &quot;Application.org.example.HTML.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.org.example.SearchFiles.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.org.example.SerializationTests.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.addDataMetro.Main.executor&quot;: &quot;Run&quot;,
     &quot;Maven.DataCollector [-Dtest=NOT_RESOLVED...].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -58,6 +67,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JLearnJava\SkillBox\FilesAndNetwork\DataCollector\src\main\java\org\example\resources" />
       <recent name="C:\JLearnJava\SkillBox\FilesAndNetwork\DataCollector\src\main\java\org\example\data\4\6" />
       <recent name="C:\JLearnJava\SkillBox\FilesAndNetwork\DataCollector\src\main\java\org\example" />
       <recent name="C:\JLearnJava\SkillBox\FilesAndNetwork\DataCollector\src\main\java" />
@@ -70,7 +80,7 @@
       <recent name="org.example.ParseFiles" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.example.HTML.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.ParseFiles.Main" />
       <module name="DataCollector" />

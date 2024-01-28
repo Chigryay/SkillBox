@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ParseHTML {
+
     private final String URL = "https://skillbox-java.github.io/";
     private final Connection connection = Jsoup.connect(URL);
 
@@ -25,19 +26,27 @@ public class ParseHTML {
         return connection.get();
     }
 
-    public List<Integer> getStationsNumberMetro() throws IOException {
-        return new StationsMetro().stationsNumber;
+    public List<Integer> numberStationsMetro = getStationsNumberMetro();
+
+    private List<Integer> getStationsNumberMetro() throws IOException {
+        return StationsMetro.stationsNumber;
     }
 
-    public List<String> getStationsNameMetro() throws IOException {
-        return new StationsMetro().stationsName;
+    public List<String> nameStationsMetro = getStationsNameMetro();
+
+    private List<String> getStationsNameMetro() throws IOException {
+        return StationsMetro.stationsName;
     }
 
-    public List<String> nameLinesMetro() throws IOException {
-        return new LinesMetro().nameLines;
+    public List<String> nameLinesMetro = getNameLinesMetro();
+
+    private List<String> getNameLinesMetro() throws IOException {
+        return LinesMetro.nameLines;
     }
 
-    public List<String> numberLinesMetro() throws IOException {
-        return new LinesMetro().numberLines;
+    public List<String> numberLinesMetro = getNumberLinesMetro();
+
+    private List<String> getNumberLinesMetro() throws IOException {
+        return LinesMetro.numberLines;
     }
 }
