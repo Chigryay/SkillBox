@@ -1,2 +1,0 @@
-Hello Java!
-1213
