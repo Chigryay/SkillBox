@@ -22,9 +22,9 @@ public class Main {
 
         CargoInformation bed2 = bed1;
 
-        bed2 = bed1.setAddress("Tomsk");
-        bed2 =  bed1.setDimensions(new Dimensions(1, 2, 3));
-        bed2 = bed1.setWeight(100);
+        bed2 = bed2.setAddress("Tomsk");
+        bed2 = bed2.setDimensions(new Dimensions(1, 2, 3));
+        bed2 = bed2.setWeight(100);
 
         System.out.println(bed2);
     }
