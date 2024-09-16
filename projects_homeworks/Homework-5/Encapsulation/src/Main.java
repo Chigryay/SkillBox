@@ -14,7 +14,7 @@ public class Main {
             elevator.move(numberFloor);
         }
     }*/
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         CargoInformation bed1 = new CargoInformation(new Dimensions(5, 10, 3), 30,
                 "Kemerovo", true, "123adc", false);
 
@@ -27,5 +27,10 @@ public class Main {
         bed2 = bed2.setWeight(100);
 
         System.out.println(bed2);
+    }*/
+    public static void main(String[] args) {
+        Country russia = new Country("Ruusia", 120_000_000,
+                50_000_000_000d, "Moscow");
+        System.out.println(russia);
     }
 }
