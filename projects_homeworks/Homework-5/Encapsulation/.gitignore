@@ -30,3 +30,4 @@ bin/
 .DS_Store
 /.idea/
 /Encapsulation.iml
+/src/TestClass.java
