@@ -16,6 +16,7 @@ public class FullNameFormatter {
         break;
       }
 
+
       //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
       String regEx = "^([A-Za-zА-Яа-я]+)\\s+([A-Za-zА-Яа-я]+)\\s([A-Za-zА-Яа-я]+)$";
       Matcher matcher = Pattern.compile(regEx).matcher(input);
