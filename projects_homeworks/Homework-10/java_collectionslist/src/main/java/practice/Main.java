@@ -22,6 +22,7 @@ public class Main {
             Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(toDo);
 
+
             // TODO реализовать бесеончный цикл с запросом команд и придумать способ засплитить строку по match.group
             while (matcher.find()) {
                 command = toDo.split(" ", 2)[0];
