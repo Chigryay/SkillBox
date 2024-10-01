@@ -15,8 +15,8 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String command;
         String textAfterCommand;
-
         String toDo = reader.readLine();
+
         while (!toDo.equals("exit")) {
             String regex = "^[LIST|ADD|EDIT|DELETE]+";
             Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
@@ -28,7 +28,7 @@ public class Main {
                 command = toDo.split(" ", 2)[0];
                 textAfterCommand = toDo.split(" ").length < 2 ?
                         command :
-                        toDo.split(" ", 3)[1];
+                        toDo.split(" ", 2)[1];
 
                 switch (command) {
                     case "add" -> todoList.add(textAfterCommand);
@@ -36,7 +36,6 @@ public class Main {
                             textAfterCommand.split(" ")[1]);
                     case "delete" -> todoList.delete(Integer.parseInt(textAfterCommand.split(" ")[0]));
                     case "list" -> todoList.getTodos().forEach(System.out::println);
-                    default -> System.out.println("error");
                 }
             }
             toDo = reader.readLine();

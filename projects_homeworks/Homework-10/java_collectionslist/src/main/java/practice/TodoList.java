@@ -24,7 +24,7 @@ public class TodoList {
     public void edit(int index, String todo) {
         // TODO: заменить дело на index переданным todo индекс,
         //  проверьте возможность изменения
-        if (index <= list.size() - 1) {
+        if (index >= 0 && index <= list.size()) {
             list.set(index, todo);
         }
     }
