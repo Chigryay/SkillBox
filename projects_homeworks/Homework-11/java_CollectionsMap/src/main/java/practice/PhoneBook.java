@@ -19,9 +19,14 @@ public class PhoneBook {
         // (рекомедуется написать отдельные методы для проверки является строка именем/телефоном)
         // если такой номер уже есть в списке, то перезаписать имя абонента
         if (checkValidationName(name) && checkValidationPhone(phone)) {
+
+            for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
+                if (pair.getValue().equals(name)) {
+                    phoneBook.put(pair.getKey() + ", " + phone, pair.getValue());
+                } else if (phoneBook.containsKey(phone))
+                    phoneBook.put(phone, name);
+            }
             phoneBook.putIfAbsent(phone, name);
-            if (phoneBook.containsKey(phone))
-                phoneBook.replace(phone, name);
         } else
             System.out.println(INVALID_FORMAT);
 
@@ -32,7 +37,6 @@ public class PhoneBook {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
         Set<String> keys = phoneBook.keySet();
-
         return phoneBook.containsKey(phone) ?
                 keys.contains(phone) ?
                         phoneBook.get(phone) + " - " + phone :
