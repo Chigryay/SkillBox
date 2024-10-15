@@ -37,15 +37,15 @@ public class CoolNumbers {
     public static boolean binarySearchInList(List<String> sortedList, String number) {
         Collections.sort(sortedList);
         int index = Collections.binarySearch(sortedList, number);
-        return sortedList.contains(sortedList.get(index));
+        return index >= 0;
     }
 
     public static boolean searchInHashSet(HashSet<String> hashSet, String number) {
-        return false;
+        return hashSet.contains(number);
     }
 
     public static boolean searchInTreeSet(TreeSet<String> treeSet, String number) {
-        return false;
+        return treeSet.contains(number);
     }
 
     public static Character generateChar(List<Character> characters) {
