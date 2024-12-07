@@ -1,11 +1,8 @@
 package practice;
 
-import net.sf.saxon.expr.parser.Loc;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-
 
 public class Birthdays {
 
@@ -16,27 +13,30 @@ public class Birthdays {
         int year = 2023;
 
         System.out.println(collectBirthdays(year, month, day));
-
     }
 
     public static String collectBirthdays(int year, int month, int day) {
-        StringBuilder builder = new StringBuilder();
 
-        LocalDate now = LocalDate.now();
-        LocalDate dateMyBirthday = LocalDate.of(year, month, day);
-        LocalDate res;
+        StringBuilder stringBuilder = new StringBuilder();
+        LocalDate localDate = LocalDate.of(year, month, day);
 
-        for (int i = 0; i <= now.getYear() - dateMyBirthday.getYear(); i++) {
-            Locale en = Locale.ENGLISH;
-            res = dateMyBirthday.plusYears(i);
+        LocalDate nowBirthday = LocalDate.now();
 
-            if (res.isAfter(now)) {
-                builder.append("");
-            }
-            else
-                builder.append(res.format(DateTimeFormatter.ofPattern(i + " - dd.MM.yyyy - E" , en))).append('\n');
+        int i = 0;
+        while (nowBirthday.getYear() != localDate.getYear() - 1) {
 
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy - EEE")
+                    .localizedBy(new Locale("us"));
+            stringBuilder.append(i).append(" - ")
+                        .append(formatter.format(localDate))
+                    .append('\n');
+            localDate = localDate.plusYears(1);
+
+            if (nowBirthday.isBefore(localDate))
+                break;
+            i++;
         }
-        return builder.toString();
+
+        return stringBuilder.toString();
     }
 }
