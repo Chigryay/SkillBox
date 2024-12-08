@@ -1,6 +1,7 @@
 package practice.regex;
 
 import java.beans.PropertyEditorSupport;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,24 +21,29 @@ public class PhoneCleanerRegex {
       // TODO:напишите ваш код тут, результат вывести в консоль.
       System.out.println(result(input));
     }
-
   }
 
   public static String result(String input) {
-    String regex = "^\\+?(7|8)?\\W?[(]?\\d{3}[)]?\\W?\\d{3}\\W?\\W?\\d{2}\\W?\\d{2}$";
+
+    String regex = "^\\+?[7|8|9]\\D?\\D?\\d{2,}\\D?\\D?\\d{3}\\D?\\d{2}\\D?\\d{2}$";
+    String error = "Неверный формат номера";
+
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher = pattern.matcher(input);
 
     if (!input.matches(regex)) {
-      return "Неверный формат номера";
+      input = error;
     }
+
     while (matcher.find()) {
-      input = matcher.group().replaceAll("[\\W+)]", "");
-      input = input.length() < 11 ?
+      input = matcher.group().replaceAll("\\D+", "");
+      input = input.length() == 10 ?
               "7".concat(input) :
-              input.replaceFirst("[+]?[7|8]", "7");
+              input.length() == 11 && (input.charAt(0) == '7' || input.charAt(0) == '8') ?
+                      input.replaceAll("8", "7") :
+                      error;
     }
+
     return input;
   }
 }
-
