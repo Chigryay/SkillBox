@@ -1,7 +1,6 @@
 package practice.twoDimensionalArray;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class TwoDimensionalArray {
 
@@ -18,28 +17,30 @@ public class TwoDimensionalArray {
 
         //TODO: Написать метод, который создаст двумерный массив char заданного размера.
         // массив должен содержать символ SYMBOL по диагоналям, пример для size = 3
-        // [X,  , X]
-        // [ , X,  ]
-        // [X,  , X]
+        // [X,  , X] [ ,X, ]
+        // [ , X,  ] [X ,,X]
+        // [X,  , X] [ ,X, ]
 
         char[][] arr = new char[size][size];
-
         char x = 'X';
-
-
-        int start = 0;
-        int end = arr.length - 1;
-
+        int start = arr.length / 2;
+        int end = start;
 
         for (int i = 0; i < arr.length; i++) {
+
+            if (start == arr.length - 1 || end == 0) {
+                end = arr.length - 1;
+                start = 0;
+            }
 
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j] = ' ';
                 arr[i][start] = x;
                 arr[i][end] = x;
             }
-            start++;
-            end--;
+
+                start++;
+                end--;
         }
 
         return arr;
