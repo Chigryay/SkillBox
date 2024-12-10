@@ -23,22 +23,23 @@ public class TwoDimensionalArray {
         // [X,  , X]
 
         char[][] arr = new char[size][size];
-        int pos1 = 0;
-        int pos2 = arr.length - 1;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                arr[i][j] = ' ';
-                arr[i][pos1] = 'X';
-                arr[i][pos2] = 'X';
-            }
-            if (pos2 - pos1 != 0) {
-                pos1++;
-                pos2--;
-            } else {
-                pos1++;
-                pos2--;
-            }
 
+        char x = 'X';
+
+
+        int start = 0;
+        int end = arr.length - 1;
+
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = ' ';
+                arr[i][start] = x;
+                arr[i][end] = x;
+            }
+            start++;
+            end--;
         }
 
         return arr;
