@@ -23,8 +23,10 @@ public class TodoList {
             toDoList.add(index, todo);
             System.out.printf("Добавлено дело \"%s\"\n", todo);
         }
+
         else
             add(todo);
+
     }
 
     public void edit(int index, String todo) {
@@ -41,8 +43,8 @@ public class TodoList {
         // TODO: удалить дело находящееся по переданному индексу,
         //  проверьте возможность удаления дела
         if (isHasIndex(index)) {
-            toDoList.remove(index);
             System.out.printf("Дело \"%s\" удалено\n", toDoList.get(index));
+            toDoList.remove(index);
         }
     }
 
@@ -54,7 +56,4 @@ public class TodoList {
     private boolean isHasIndex(int index) {
         return index >= 0 && index < toDoList.size();
     }
-
-
-
 }
