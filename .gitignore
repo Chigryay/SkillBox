@@ -1,3 +1,2 @@
 *.*
-!**/src/**/*.java
-**/src/test
+!/**/**/**/src/main/*

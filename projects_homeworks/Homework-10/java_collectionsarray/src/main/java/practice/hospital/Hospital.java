@@ -1,46 +1,71 @@
 package practice.hospital;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.Locale;
 
 public class Hospital {
-    private final static float maxTemp = 42.1f;
-    private final static float minTemp = 31.9f;
-    private static final StringBuilder stringBuilder = new StringBuilder();
-    public static float[] generatePatientsTemperatures(int patientsCount) {
-        float[] arr = new float[patientsCount];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (float) Math.round(new Random().nextFloat(minTemp, maxTemp) * 10) / 10;
-        }
-        return arr;
+
+    public static final float MIN_TEMP = 32.0f;
+    public static final float MAX_TEMP = 40.0f;
+    public static final float HEALTHY_TEMP = 37.0f;
+
+    private float averageTemp;
+    private List<Float> healthyPersons;
+    private final float[] temperatureData;
+
+    public Hospital(int countPerson) {
+        healthyPersons = new ArrayList<>();
+        temperatureData = new float[countPerson];
     }
 
-    public static String getReport(float[] temperatureData) {
-        /*
-        TODO: Напишите код, который выводит среднюю температуру по больнице,количество здоровых пациентов,
-            а также температуры всех пациентов.
-            Округлите среднюю температуру с помощью Math.round до 2 знаков после запятой,
-            а температуры каждого пациента до 1 знака после запятой
-        */
+    public String getReport() {
 
-        float averageTemp = 0;
-        int count = 0;
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < temperatureData.length; i++) {
+            temperatureData[i] = tempGeneration();
+            healthyPersons = getHealthyPersons(temperatureData[i]);
             averageTemp += temperatureData[i];
-            stringBuilder.append(temperatureData[i]).append(" ");
-            if (temperatureData[i] >= 36.2 && temperatureData[i] <= 36.9) {
-                count++;
-            }
         }
 
-        averageTemp = (float) Math.round((averageTemp / temperatureData.length) * 100) / 100;
-        String report =
-            "Температуры пациентов: " + stringBuilder.toString().trim() +
-            "\nСредняя температура: " + averageTemp +
-            "\nКоличество здоровых: " + count;
+        averageTemp /= temperatureData.length;
 
-        return report;
+        return builder.append("Температуры пациентов: ")
+                .append(Arrays.toString(temperatureData))
+                .append("\n")
+                .append("Средняя температура: ")
+                .append(String.format(Locale.ENGLISH, "%.2f", averageTemp))
+                .append("\n")
+                .append("Количество здоровых: ")
+                .append(healthyPersons.size())
+                .toString();
     }
+
+    private  List<Float> getHealthyPersons(float temp) {
+        if (isHealthy(temp)) {
+            healthyPersons.add(temp);
+        }
+        return healthyPersons;
+    }
+
+    private boolean isHealthy(float temp) {
+        return temp >= MIN_TEMP && temp < HEALTHY_TEMP;
+    }
+
+    private float tempGeneration() {
+        float rndTempValue = (float) Math.random() * (MAX_TEMP - MIN_TEMP + 1) + MIN_TEMP;
+
+        DecimalFormatSymbols symbol = new DecimalFormatSymbols(Locale.ENGLISH);
+        DecimalFormat decimalFormat = new DecimalFormat("#.#", symbol);
+        try {
+            rndTempValue = Float.parseFloat(decimalFormat.format(rndTempValue));
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return rndTempValue;
+    }
+
 }

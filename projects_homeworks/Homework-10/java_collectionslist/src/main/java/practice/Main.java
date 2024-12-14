@@ -3,42 +3,65 @@ package practice;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Stream;
 
 public class Main {
-    private static TodoList todoList = new TodoList();
+    private static final TodoList todoList = new TodoList();
 
     public static void main(String[] args) throws IOException {
         // TODO: написать консольное приложение для работы со списком дел todoList
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String command;
-        String textAfterCommand;
-        String toDo = reader.readLine();
+        String input = reader.readLine();
 
-        while (!toDo.equals("exit")) {
-            String regex = "^[LIST|ADD|EDIT|DELETE]+";
-            Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(toDo);
+        while (!input.equals("0") && !input.isEmpty()) {
+            String regex = "add|edit|delete|list";
+            String command = "";
+            String todo = "";
+            int index = 0;
 
+            String[] commands = input.split(" ");
+            command = commands[0];
 
-            // TODO реализовать бесеончный цикл с запросом команд и придумать способ засплитить строку по match.group
-            while (matcher.find()) {
-                command = toDo.split(" ", 2)[0];
-                textAfterCommand = toDo.split(" ").length < 2 ?
-                        command :
-                        toDo.split(" ", 2)[1];
+            if (command.matches(regex)) {
+                if (commands.length > 1) {
+                    todo = input.split(" ", 2)[1];
+                    String[] textAfterCommand = todo.split(" ", 2);
+                    if (textAfterCommand.length > 1) {
+                        try {
+                            index = Integer.parseInt(textAfterCommand[0]);
+                            todo = textAfterCommand[1];
+
+                        } catch (NumberFormatException ex) {
+
+                        }
+
+                    } else {
+                        try {
+                            index = Integer.parseInt(textAfterCommand[0]);
+                        } catch (Exception ex) {
+
+                        }
+
+                    }
+                }
 
                 switch (command) {
-                    case "add" -> todoList.add(textAfterCommand);
-                    case "edit" -> todoList.edit(Integer.parseInt(textAfterCommand.split(" ")[0]),
-                            textAfterCommand.split(" ")[1]);
-                    case "delete" -> todoList.delete(Integer.parseInt(textAfterCommand.split(" ")[0]));
-                    case "list" -> todoList.getTodos().forEach(System.out::println);
+                    case "add" -> {
+                        if (commands.length > 2)
+                            todoList.add(index, todo);
+                        else
+                            todoList.add(todo);
+                    }
+                    case "edit" -> todoList.edit(index, todo);
+                    case "delete" -> todoList.delete(index);
+                    case "list" -> {
+                        for (int i = 0; i < todoList.getToDoList().size(); i++) {
+                            System.out.println(i + " - " + todoList.getToDoList().get(i));
+                        }
+                    }
                 }
             }
-            toDo = reader.readLine();
+            input = reader.readLine();
         }
+
     }
 }
