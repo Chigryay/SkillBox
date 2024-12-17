@@ -24,40 +24,29 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         EmailList emailList = new EmailList();
+
         while (true) {
             String input = reader.readLine();
-            String command,
-                    textEmail = "";
-
             if (input.equals("0")) {
                 break;
             }
 
-            if (input.split(" ").length <= 2) {
-                command = getCommand(input);
-                if (input.split(" ").length != 1)
-                    textEmail = getTextEmail(input);
-            } else {
-                continue;
-            }
+            String email = "";
+            String regex = "[add|list]+";
+            String command = input.split(" ")[0];
+            
+            if (command.matches(regex) && input.split(" ").length <= 2) {
+                if (input.split(" ").length > 1) {
+                    email = input.split(" ")[1];
+                }
 
-            switch (command) {
-                case "add" -> emailList.add(textEmail);
-                case "list" -> emailList.getSortedEmails()
-                        .forEach(System.out::println);
-                default -> {
-                    System.out.println("Неверная команда");
+                switch (command) {
+                    case "add" -> emailList.add(email);
+                    case "list" -> emailList.getSortedEmails().forEach(System.out::println);
                 }
             }
         }
-    }
-    private static String getCommand(String input) {
-        return input.split(" ").length != 1 ?
-                input.split(" ", 2)[0].toLowerCase() :
-                input.split(" ")[0].toLowerCase();
-    }
-    private static String getTextEmail(String input) {
-        return input.split(" ", 2)[1].toLowerCase();
     }
 }
