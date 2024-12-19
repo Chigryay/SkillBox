@@ -1,14 +1,18 @@
 package practice;
 
-import net.sf.saxon.style.XSLOutput;
-
 import java.util.*;
 
 public class PhoneBook {
-    private Map<String, String> phoneBook;
-    public static final String REGEX_FOR_PHONE = "\\+?(7|8)?\\W?[(]?\\d{3}[)]?\\W?\\d{3}\\W?\\W?\\d{2}\\W?\\d{2}$";
+
+    public static final String INVALID_FORMAT = "Неверный формат ввода";
+    public static final String REGEX_FOR_PHONE = "\\+?[7|8]?\\W?[(]?\\d{3}[)]?\\W?\\d{3}\\W?\\W?\\d{2}\\W?\\d{2}$$";
     public static final String REGEX_FOR_NAME = "[A-Za-zА-Яа-я]+";
-    private static final String INVALID_FORMAT = "Неверный формат ввода";
+
+    private final Map<String, String> phoneBook;
+
+    public Map<String, String> getPhoneBook() {
+        return phoneBook;
+    }
 
     public PhoneBook() {
         phoneBook = new HashMap<>();
@@ -18,11 +22,10 @@ public class PhoneBook {
         // проверьте корректность формата имени и телефона
         // (рекомедуется написать отдельные методы для проверки является строка именем/телефоном)
         // если такой номер уже есть в списке, то перезаписать имя абонента
-
-        if (checkValidationName(name) && checkValidationPhone(phone)) {
+        if (isMatchesPhone(phone) && isMatchesName(name)) {
             if (!phoneBook.isEmpty()) {
                 for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
-                    if (phone.equals(pair.getValue())) {
+                    if (pair.getValue().equals(phone)) {
                         phoneBook.remove(pair.getKey());
                         phoneBook.put(name, phone);
                     }
@@ -31,25 +34,30 @@ public class PhoneBook {
                     } else
                         phoneBook.put(name, phone);
                 }
-            } else
-                phoneBook.putIfAbsent(name, phone);
-
-
+            } else {
+                phoneBook.put(name, phone);
+            }
 
         } else
             System.out.println(INVALID_FORMAT);
+
     }
 
     public String getContactByPhone(String phone) {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
         StringBuilder builder = new StringBuilder();
-        for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
-            if (phone.equals(pair.getValue())) {
-                builder.append(pair.getKey())
-                        .append(" - ")
-                        .append(phone);
+        if (phoneBook.containsValue(phone)) {
+            for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
+                if (pair.getValue().equals(phone)) {
+                    builder.append(pair.getKey())
+                            .append(" - ")
+                            .append(pair.getValue());
+
+                    System.out.printf("%s - %s\n", pair.getKey(), pair.getValue());
+                }
             }
+
         }
         return builder.toString();
     }
@@ -57,14 +65,18 @@ public class PhoneBook {
     public Set<String> getContactByName(String name) {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найден - вернуть пустой TreeSet
-        Set<String> contact = new TreeSet<>();
-
-        for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
-            if (name.equals(pair.getKey())) {
-                contact.add(name + " - " + pair.getValue());
+        Set<String> nameSet = new TreeSet<>();
+        if (phoneBook.containsKey(name)) {
+            for (String key : phoneBook.keySet()) {
+                if (name.equals(key)) {
+                    nameSet.add(name.concat(" - ")
+                            .concat(phoneBook.get(key)));
+                    System.out.printf("%s - %s\n", key, phoneBook.get(key));
+                }
             }
         }
-        return contact;
+
+        return nameSet;
     }
 
     public Set<String> getAllContacts() {
@@ -75,16 +87,16 @@ public class PhoneBook {
             for (Map.Entry<String, String> pair : phoneBook.entrySet()) {
                 contacts.add(pair.getKey() + " - " + pair.getValue());
             }
-            return contacts;
-        } else
-            return new TreeSet<>();
+        }
+
+        return contacts;
     }
 
-    public static boolean checkValidationPhone(String phone) {
+    private boolean isMatchesPhone(String phone) {
         return phone.matches(REGEX_FOR_PHONE);
     }
 
-    public static boolean checkValidationName(String name) {
+    private boolean isMatchesName(String name) {
         return name.matches(REGEX_FOR_NAME);
     }
 
